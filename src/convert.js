@@ -23,7 +23,7 @@ const convert = async () => {
     );
 
     if (!fs.existsSync(path.join(__dirname, "csv", directory))) {
-      fs.mkdirSync(path.join(__dirname, "csv", directory))
+      fs.mkdirSync(path.join(__dirname, "csv", directory), {recursive: true})
     }
 
     let productsOfSameType = [];
